@@ -26,18 +26,36 @@ Widget drawerBaslik(BuildContext context) => Material(
               top: 12 + MediaQuery.of(context).padding.top, bottom: 12),
           child: Column(
             children: const [
-              CircleAvatar(
-                radius: 48,
-                backgroundImage:
-                    const NetworkImage('https://picsum.photos/200'),
+              Text(
+                'Profilim',
+                style: TextStyle(fontSize: 24),
+              ),
+              Text(
+                'Düzenle',
+                textAlign: TextAlign.right,
+              ),
+              SizedBox(
+                height: 12,
+              ),
+              Center(
+                child: CircleAvatar(
+                  backgroundColor: Colors.orange,
+                  // child: ,
+                  radius: 48,
+                  backgroundImage:
+                      const NetworkImage('https://picsum.photos/200'),
+                ),
               ),
               SizedBox(
                 height: 12,
               ),
               Text(
                 'Ad Soyad',
-                style: TextStyle(fontSize: 24),
+                style: TextStyle(fontSize: 20),
               ),
+              Divider(
+                color: Colors.orange,
+              )
             ],
           ),
         ),
@@ -67,12 +85,13 @@ Widget drawerMenu(BuildContext context) => Wrap(
           onTap: () {},
         ),
         ListTile(
-          leading: const Icon(Icons.web),
+          leading: const Icon(Icons.language),
           title: const Text('X Web'),
           onTap: () {},
         ),
       ],
     );
+
 
 // class DrawerWidget extends StatelessWidget {
 //   const DrawerWidget({Key? key}) : super(key: key);

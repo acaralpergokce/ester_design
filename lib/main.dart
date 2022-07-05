@@ -14,6 +14,8 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
+      debugShowCheckedModeBanner: false,
+      // TODO: Release öncesi kaldırılacak.
       title: 'Ester Demo',
       theme: ThemeData(
         primarySwatch: Colors.blue,

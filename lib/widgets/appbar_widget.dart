@@ -14,13 +14,26 @@ class AppBarWidget extends StatelessWidget {
     return AppBar(
       toolbarHeight: 100,
       actions: [
-        IconButton(
-          onPressed: () {
+        InkWell(
+          onTap: () {
             Scaffold.of(context).openEndDrawer();
           },
-          icon: Icon(Icons.person),
-          color: Colors.black,
+          child: Container(
+            padding: EdgeInsets.only(right: 15),
+            child: CircleAvatar(
+              radius: 20,
+              backgroundImage: const NetworkImage('https://picsum.photos/200'),
+            ),
+          ),
         )
+
+        // IconButton(
+        //   onPressed: () {
+        //     Scaffold.of(context).openEndDrawer();
+        //   },
+        //   icon: Icon(Icons.person),
+        //   color: Colors.black,
+        // )
       ],
       leading: IconButton(
         color: Colors.black,
