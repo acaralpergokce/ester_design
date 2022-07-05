@@ -1,5 +1,6 @@
 import 'package:ester_design/pages/explore.dart';
 import 'package:ester_design/pages/messages.dart';
+import 'package:ester_design/widgets/drawer_widget.dart';
 import 'package:flutter/material.dart';
 import 'pages/groups.dart';
 
@@ -42,6 +43,7 @@ class _MyHomePageState extends State<MyHomePage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      endDrawer: DrawerWidget(),
       body: IndexedStack(
         index: mevcutSayfa,
         children: ekranlar,
